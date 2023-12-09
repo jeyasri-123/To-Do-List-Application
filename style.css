@@ -171,29 +171,14 @@ body {
   margin-right: auto;
 }
 
-/* .container.main.mt-3{
-  padding-top: 10%;
-} */
 
-/* body.light-mode { */
-/* background: linear-gradient(
-    to right,
-    rgba(1, 110, 225),
-    rgba(80, 139, 252, 1)
-  ); */
-/* background-image: url("https://cdn.pixabay.com/photo/2022/07/31/08/03/to-do-7355222_1280.jpg"); Light mode background image
-  background-repeat: no-repeat;
-  background-size: cover; */
-/* } */
 
 body.dark-mode {
   background: #0f0000;
 
-  /* background-image: url("https://cdn.pixabay.com/photo/2022/07/31/08/03/to-do-7355222_1280.jpg"); Dark mode background image (same as light mode) */
 
   color: #fff;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
+  
 }
 
 body.dark-mode::before {
