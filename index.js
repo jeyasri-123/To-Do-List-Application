@@ -38,8 +38,8 @@ checkboxes.forEach((checkbox) => {
 });
 
 flatpickr(dueDateInput, {
-  enableTime: false, // If you want to enable time selection as well
-  dateFormat: "Y-m-d", // Adjust the date format as needed
+  enableTime: false,
+  dateFormat: "Y-m-d", 
 });
 
 function init() {
@@ -427,25 +427,14 @@ function addItem(e) {
   const tasks = taskList.children;
   console.log(newTaskTitle);
 
-  // if (dueDateObj < currentDate && tasks.length === 0) {
-  //   displayErrorMessage("Due date has already passed");
-  //   tasksHeading.classList.add("hidden");
-  //   return false;
-  // } else if (dueDateObj < currentDate && tasks.length > 0) {
-  //   displayErrorMessage("Due date has already passed");
-  //   return false;
-  // } else {
-  //   tasksHeading.classList.remove("hidden");
-  // }
-
-  // Added new logic to check conditions whether Task and Date are entered
+  
 
   if (!newTaskTitle) {
     displayErrorMessage("Task not entered");
     tasksHeading.classList.add("hidden");
     return false;
   } else if (!dueDate) {
-    displayErrorMessage("Please specify a due date!!!"); // Check if the due date is specified or not
+    displayErrorMessage("Please specify a due date!!!"); 
     return false;
   } else if (dueDateObj < currentDate) {
     displayErrorMessage("Due date has already passed");
@@ -517,13 +506,7 @@ function handleItemClick(e) {
   saveTasksToLocalStorage();
 }
 
-// function DefaultDate() {
-//   const today = new Date();
-//   const year = today.getFullYear();
-//   const month = today.getMonth() + 1;
-//   const day = today.getDate();
-//   return `${year}-${month}-${day}`;
-// }
+
 
 function markAsComplete(e) {
   const li = e.target.parentElement;
@@ -691,18 +674,7 @@ function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// function sortTasks(order){
-//   if (order === 'highToLow'){
-//     sortByPriority('highToLow');
 
-//   }
-//   else if (order === 'lowToHigh'){
-//     sortByPriority('lowToHigh');
-//   }
-//   document.getElementById("myDropdown").classList.remove("show");
-// }
-
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -783,7 +755,7 @@ function createNewTask(taskTitle, createdDate, dueDate, priority) {
 
 init();
 
-// Preloader function
+
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(function () {
     document.querySelector(".preloader").style.display = "none";
